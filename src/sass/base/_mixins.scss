@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+
+@mixin mobile-lg() {
+    @media screen and (v.$mobile-lg) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-lg() {
+    @media screen and (v.$desktop-lg) {
+        @content;
+    }
+}
+
+@mixin headings() {
+    h2 {
+        text-align: center;
+
+        span {
+            font-family: v.$f-secondary;
+            display: block;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@mixin boton($fuenteColor, $bgColor) {
+    color: $fuenteColor;
+    background-color: $bgColor;
+    padding: 0.7em;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: darken($bgColor, 5%);
+    }
+}

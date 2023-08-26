@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+    padding-top: 3rem;
+    @extend %contenedor;
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}
