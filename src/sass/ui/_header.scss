@@ -2,18 +2,80 @@
 @use 'base/variables' as v;
 
 .header {
-    padding-top: 3rem;
-    @extend %contenedor;
+    padding-top: 2.8rem;
 
     &__flex {
-        display: flex;
-        flex-direction: column;
+        @extend %contenedor;
+        display: grid;
         gap: 2rem;
+        justify-items: center;
 
         @include m.tablet {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
         }
     }
 
+    &__logo {
+        max-width: 15rem;
+        width: 95%;
+
+        @include m.tablet {
+            max-width: 19rem;
+        }
+    }
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+
+    &__item {
+        max-width: 2rem;
+        width: 90%;
+
+        @include m.tablet {
+            max-width: 3rem;
+        }
+    }
+}
+
+.nav {
+    background-color: v.$clr-secundary;
+    padding-block: 0.1rem;
+
+    &__list {
+        margin-block: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        border-top: 3px dashed v.$white;
+        border-bottom: 3px dashed v.$white;
+        padding-block: 0.5rem;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-around;
+            padding-block: 1rem;
+        }
+    }
+
+    &__item {
+        color: v.$white;
+        font-size: large;
+        transition: color 0.1s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: v.$clr-primary;
+        }
+    }
 }

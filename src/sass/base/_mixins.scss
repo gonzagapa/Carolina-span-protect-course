@@ -1,25 +1,25 @@
-@use 'base/variables' as v;
+@use './variables' as v;
 
 @mixin mobile-lg() {
-    @media screen and (v.$mobile-lg) {
+    @media screen and (min-width: v.$mobile-lg) {
         @content;
     }
 }
 
 @mixin tablet() {
-    @media screen and (v.$tablet) {
+    @media screen and (min-width:v.$tablet) {
         @content;
     }
 }
 
 @mixin desktop() {
-    @media screen and (v.$desktop) {
+    @media screen and (min-width:v.$desktop) {
         @content;
     }
 }
 
 @mixin desktop-lg() {
-    @media screen and (v.$desktop-lg) {
+    @media screen and (min-width:v.$desktop-lg) {
         @content;
     }
 }
