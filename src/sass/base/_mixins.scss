@@ -49,3 +49,24 @@
         background-color: darken($bgColor, 5%);
     }
 }
+
+@mixin heading() {
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: .8;
+
+    @include tablet {
+        font-size: 2.5rem;
+    }
+
+    span {
+        font-weight: normal;
+        text-transform: none;
+        display: block;
+        font-family: v.$f-secondary;
+        color: v.$clr-primary;
+    }
+}

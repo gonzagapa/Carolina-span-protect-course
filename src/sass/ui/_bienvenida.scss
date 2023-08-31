@@ -1,0 +1,26 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.bienvenida {
+    margin-top: 3rem;
+
+    &__heading {
+        @include m.heading();
+    }
+
+    &__contenido {
+        max-width: 30rem;
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__texto {
+        color: darken(v.$gray, 25%);
+        font-size: 1.3rem;
+
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+    }
+}
