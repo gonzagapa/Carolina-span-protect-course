@@ -2,14 +2,20 @@
 @use 'base/variables' as v;
 
 .cards {
+    overflow: hidden;
     display: grid;
-    gap: 11.5rem;
+    gap: 4.5rem;
     flex-direction: column;
     @extend %contenedor;
 
     @include m.tablet {
-        grid-template-columns: repeat(3, 1fr);
+        overflow: unset;
+        gap: 3rem;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        place-content: center;
     }
+
+    margin-bottom: 5rem;
 }
 
 .card {
@@ -25,6 +31,13 @@
         max-width: 40rem;
         width: 90%;
         margin-inline: auto;
+        transition: transform .4s ease-in;
+
+        &:hover {
+            transform: rotate(6deg) scale(1.2);
+            z-index: 3;
+            position: relative;
+        }
 
         @include m.tablet {
             width: auto;
@@ -36,16 +49,15 @@
         background-color: v.$white;
         text-align: center;
         padding-top: 1.5rem;
-        left: 23%;
-        width: 60%;
-        z-index: 1;
-        position: absolute;
+        margin-top: -30px;
+        width: 70%;
+        margin-inline: auto;
+        z-index: 11;
+        position: relative;
 
         @include m.tablet {
             width: 90%;
             margin-inline: auto;
-            left: 4%;
-            bottom: 3px;
         }
     }
 
