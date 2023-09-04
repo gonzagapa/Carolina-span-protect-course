@@ -1,0 +1,69 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.productos {
+    margin-bottom: 3rem;
+
+    &__heading {
+        @include m.heading();
+        text-align: center;
+    }
+
+
+    &__grid {
+        display: grid;
+        gap: 1rem;
+        place-items: center;
+        @extend %contenedor;
+
+        @include m.tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m.desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.producto {
+    max-width: 28.125rem;
+    width: 95%;
+    overflow: hidden;
+
+    @include m.tablet {
+        max-width: unset;
+        width: auto
+    }
+
+    &__mask {
+        overflow: hidden;
+    }
+
+    &__imagen {
+        transition: transform .3s ease-in;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__titulo {
+        @include m.heading-normal(v.$clr-primary);
+    }
+
+    &__texto {
+        text-transform: uppercase;
+    }
+
+    &__contenido {
+        padding: 1.2rem 1rem 1rem;
+        background-color: v.$white;
+    }
+
+    &__precio {
+        color: lighten(v.$negro, 50%);
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}

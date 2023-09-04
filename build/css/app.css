@@ -338,7 +338,7 @@ template {
   display: none;
 }
 
-.cards, .slider, .header__flex {
+.productos__grid, .cards, .slider, .header__flex {
   width: 95%;
   max-width: 1200px;
   margin-inline: auto;
@@ -660,10 +660,10 @@ p {
 }
 
 .horarios {
-  background-image: linear-gradient(to bottom, hsl(174, 44%, 69%) 0%, hsl(174, 44%, 69%) 50%, transparent 50%), url("../img/bg_horarios.webp");
+  background-image: linear-gradient(to bottom, hsl(174, 44%, 69%) 0%, hsl(174, 44%, 69%) 60%, transparent 60%), url("../img/bg_horarios.webp");
   background-repeat: no-repeat;
-  background-position: center, 30% center;
-  margin-bottom: 3rem;
+  background-position: center, 30% bottom;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .horarios {
@@ -679,7 +679,7 @@ p {
 }
 .horarios__grid {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 500px;
 }
 @media screen and (min-width: 768px) {
   .horarios__grid {
@@ -721,6 +721,87 @@ p {
 }
 .table__data {
   padding: 1rem;
+  text-align: center;
+}
+
+.productos {
+  margin-bottom: 3rem;
+}
+.productos__heading {
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 0.8;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .productos__heading {
+    font-size: 2.5rem;
+  }
+}
+.productos__heading span {
+  font-weight: normal;
+  text-transform: none;
+  display: block;
+  font-family: Italianno, sans-serif;
+  color: hsl(336, 61%, 70%);
+}
+.productos__grid {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+@media screen and (min-width: 768px) {
+  .productos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1210px) {
+  .productos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.producto {
+  max-width: 28.125rem;
+  width: 95%;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .producto {
+    max-width: unset;
+    width: auto;
+  }
+}
+.producto__mask {
+  overflow: hidden;
+}
+.producto__imagen {
+  transition: transform 0.3s ease-in;
+}
+.producto__imagen:hover {
+  transform: scale(1.2);
+}
+.producto__titulo {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: hsl(336, 61%, 70%);
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+.producto__texto {
+  text-transform: uppercase;
+}
+.producto__contenido {
+  padding: 1.2rem 1rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.producto__precio {
+  color: gray;
+  font-size: 1.6rem;
   text-align: center;
 }
 /*# sourceMappingURL=app.css.map */
