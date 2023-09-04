@@ -658,4 +658,69 @@ p {
 .card__enlace:hover, .card__enlace:focus {
   background-color: #dc6f9b;
 }
+
+.horarios {
+  background-image: linear-gradient(to bottom, hsl(174, 44%, 69%) 0%, hsl(174, 44%, 69%) 50%, transparent 50%), url("../img/bg_horarios.webp");
+  background-repeat: no-repeat;
+  background-position: center, 30% center;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .horarios {
+    background-image: linear-gradient(to right, hsl(174, 44%, 69%) 0%, hsl(174, 44%, 69%) 50%, transparent 50%), url("../img/bg_horarios.webp");
+    background-position: center, right center;
+  }
+}
+.horarios__texto {
+  max-width: 50ch;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.horarios__grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .horarios__grid {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.horarios__contenido {
+  color: hsl(0, 0%, 100%);
+  padding: 2rem 1rem;
+}
+.horarios__heading {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+.table {
+  border: 3px solid hsl(336, 61%, 70%);
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.table__head {
+  background-color: hsl(336, 61%, 70%);
+}
+.table__dhead {
+  text-align: center;
+  font-weight: 400;
+}
+.table__row {
+  transition: background-color 0.3s ease-in;
+}
+.table__row:hover {
+  background-color: #7bccc4;
+}
+.table__data {
+  padding: 1rem;
+  text-align: center;
+}
 /*# sourceMappingURL=app.css.map */

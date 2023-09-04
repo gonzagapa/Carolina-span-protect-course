@@ -1,0 +1,69 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.horarios {
+    background-image: linear-gradient(to bottom, v.$clr-secundary 0%, v.$clr-secundary 50%, transparent 50%), url('../img/bg_horarios.webp');
+    background-repeat: no-repeat;
+    background-position: center, 30% center;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        background-image: linear-gradient(to right, v.$clr-secundary 0%, v.$clr-secundary 50%, transparent 50%), url('../img/bg_horarios.webp');
+        background-position: center, right center;
+    }
+
+    &__texto {
+        max-width: 50ch;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+        @include m.tablet {
+            grid-template-rows: unset;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__contenido {
+        color: v.$white;
+        padding: 2rem 1rem;
+    }
+
+    &__heading {
+        @include m.heading-normal();
+    }
+}
+
+.table {
+    border: 3px solid v.$clr-primary;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.2rem;
+
+    &__head {
+        background-color: v.$clr-primary;
+    }
+
+    &__dhead {
+        text-align: center;
+        font-weight: 400;
+    }
+
+    &__row {
+        transition: background-color .3s ease-in;
+
+        &:hover {
+            background-color: darken(v.$clr-secundary, 5%);
+        }
+    }
+
+    &__data {
+        padding: 1rem;
+        text-align: center;
+    }
+}

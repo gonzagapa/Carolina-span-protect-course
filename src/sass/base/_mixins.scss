@@ -70,3 +70,12 @@
         color: v.$clr-primary;
     }
 }
+
+@mixin heading-normal($f-color: v.$white) {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $f-color;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    text-align: center;
+}
