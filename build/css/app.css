@@ -338,7 +338,7 @@ template {
   display: none;
 }
 
-.productos__grid, .cards, .slider, .header__flex {
+.footer, .productos__grid, .cards, .slider, .header__flex {
   width: 95%;
   max-width: 1200px;
   margin-inline: auto;
@@ -354,7 +354,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  font-size: clamp(1rem, 0.946969697rem + 0.2525252525vw, 1.4rem);
+  font-size: clamp(1rem, 0.946969697rem + 0.2525252525vw, 1.25rem);
 }
 
 h1 {
@@ -529,6 +529,44 @@ p {
 }
 .nav__item:hover, .nav__item:focus {
   color: hsl(336, 61%, 70%);
+}
+
+.slider {
+  position: relative;
+}
+.slider .slider__contenedor {
+  overflow: hidden;
+}
+.slider .slider__imagen {
+  width: 100%;
+}
+.slider__item {
+  height: 100%;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.slider .swiper-pagination {
+  position: static;
+}
+.slider .swiper-button-next {
+  display: none;
+}
+@media screen and (min-width: 1210px) {
+  .slider .swiper-button-next {
+    display: block;
+    right: -40px;
+  }
+}
+.slider .swiper-button-prev {
+  display: none;
+}
+@media screen and (min-width: 1210px) {
+  .slider .swiper-button-prev {
+    display: block;
+    left: -40px;
+  }
 }
 
 .bienvenida {
@@ -803,5 +841,108 @@ p {
   color: gray;
   font-size: 1.6rem;
   text-align: center;
+}
+
+.cita {
+  padding: 40px 16px;
+  min-height: 21.875rem;
+  background-image: url("../img/bg_citas.webp");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+.cita__titulo {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  text-align: center;
+  font-size: 56px;
+}
+.cita__texto {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+.cita__enlace {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(174, 44%, 69%);
+  padding: 0.7em;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 24px;
+  width: min(250px, 40%);
+}
+.cita__enlace:hover, .cita__enlace:focus {
+  background-color: #7bccc4;
+}
+
+.footer {
+  margin-top: 4rem;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__info {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+.footer__horarios {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+.footer__horarios-item {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer__contacto {
+  text-align: center;
+}
+.footer__contacto .social-media {
+  justify-content: center;
+}
+.footer__heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 0.8;
+}
+@media screen and (min-width: 768px) {
+  .footer__heading {
+    font-size: 2.5rem;
+  }
+}
+.footer__heading span {
+  font-weight: normal;
+  text-transform: none;
+  display: block;
+  font-family: Italianno, sans-serif;
+  color: hsl(336, 61%, 70%);
+}
+.footer__text {
+  max-width: 40ch;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+.footer__copyright {
+  color: hsla(0, 1%, 66%, 0.937);
+  border-top: 1px solid hsla(0, 2%, 88%, 0.937);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=app.css.map */

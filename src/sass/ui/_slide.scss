@@ -4,4 +4,43 @@
 .slider {
     @extend %contenedor;
 
+    position: relative;
+
+    .slider__contenedor {
+        overflow: hidden;
+    }
+
+    .slider__imagen {
+        width: 100%;
+    }
+
+    &__item {
+        height: 100%;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+
+    .swiper-pagination {
+        position: static;
+    }
+
+    .swiper-button-next {
+        display: none;
+
+        @include m.desktop {
+            display: block;
+            right: -40px;
+        }
+    }
+
+    .swiper-button-prev {
+        display: none;
+
+        @include m.desktop {
+            display: block;
+            left: -40px;
+        }
+    }
 }

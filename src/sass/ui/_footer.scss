@@ -1,0 +1,60 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    @extend %contenedor;
+    margin-top: 4rem;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        margin-bottom: 2rem;
+    }
+
+    &__horarios {
+        max-width: 40ch;
+        margin-inline: auto;
+
+        &-item {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__contacto {
+        text-align: center;
+
+        .social-media {
+            justify-content: center;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        @include m.heading();
+    }
+
+    &__text {
+        max-width: 40ch;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__copyright {
+        color: hsla(0, 1%, 66%, 0.937);
+        border-top: 1px solid hsla(0, 2%, 88%, 0.937);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}

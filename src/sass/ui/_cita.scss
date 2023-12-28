@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cita {
+    padding: 40px 16px;
+    min-height: 21.875rem;
+    background-image: url('../img/bg_citas.webp');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: v.$white;
+    text-align: center;
+
+    &__titulo {
+        @include m.heading-normal();
+        font-size: 56px;
+    }
+
+    &__texto {
+        max-width: 40ch;
+        margin-inline: auto;
+    }
+
+    &__enlace {
+        @include m.boton(v.$white, v.$clr-secundary);
+        font-size: 24px;
+        width: min(250px, 40%);
+    }
+}
