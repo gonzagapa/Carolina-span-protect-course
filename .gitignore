@@ -1,8 +1,2 @@
 node_modules
-*.jpeg
-*.png
-*.webp
-*.avif
-build/img
-src/img
 package-lock.json
