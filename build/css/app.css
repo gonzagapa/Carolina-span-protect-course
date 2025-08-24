@@ -600,7 +600,7 @@ p {
   margin-bottom: 5rem;
 }
 .bienvenida__texto {
-  color: #b8b8b8;
+  color: hsl(0, 0%, 72%);
   font-size: 1.3rem;
   margin-bottom: 0;
 }
@@ -694,7 +694,7 @@ p {
   width: 100%;
 }
 .card__enlace:hover, .card__enlace:focus {
-  background-color: #dc6f9b;
+  background-color: hsl(336, 61%, 65%);
 }
 
 .horarios {
@@ -755,7 +755,7 @@ p {
   transition: background-color 0.3s ease-in;
 }
 .table__row:hover {
-  background-color: #7bccc4;
+  background-color: hsl(174, 44%, 64%);
 }
 .table__data {
   padding: 1rem;
@@ -838,7 +838,7 @@ p {
   background-color: hsl(0, 0%, 100%);
 }
 .producto__precio {
-  color: gray;
+  color: hsl(0, 0%, 50%);
   font-size: 1.6rem;
   text-align: center;
 }
@@ -877,7 +877,7 @@ p {
   width: min(250px, 40%);
 }
 .cita__enlace:hover, .cita__enlace:focus {
-  background-color: #7bccc4;
+  background-color: hsl(174, 44%, 64%);
 }
 
 .footer {
